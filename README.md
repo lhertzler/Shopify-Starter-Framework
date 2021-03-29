@@ -25,7 +25,16 @@ To build:
 4. Run `npm install` && `npm install gulp` or `(npm  install -g gulp)`
    **Make sure to use latest version of nvm, nvm use --lts**
 
-5. Set up config.yml
+5. Get password from private app.
+
+  - Shopify admin => Apps => Private Apps => Manage Private Apps => Create New
+    Private App
+    - Enter App Name
+    - Under permissions _Theme templates and theme assets_ set to **Read Write** access.
+    - Save
+    - Copy **Password for config api-password**
+
+6. Set up config.yml
 
 ``` yaml
 # password, theme_id, and store variables are required.
@@ -59,15 +68,6 @@ production:
   readonly: true
 
 ```
-
-6. Get password from private app.
-
-  - Shopify admin => Apps => Private Apps => Manage Private Apps => Create New
-    Private App
-    - Enter App Name
-    - Under permissions _Theme templates and theme assets_ set to **Read Write** access.
-    - Save
-    - Copy **Password**
 
 7. Run `gulp build` to compile
 
